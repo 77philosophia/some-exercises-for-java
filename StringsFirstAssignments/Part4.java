@@ -20,8 +20,10 @@ public class Part4 {
         URLResource ur = new URLResource("http://www.dukelearntoprogram.com/course2/data/manylinks.html");
         int youtubeIndex = -1;
         String result="";
+        String s_low = "";
         for (String s : ur.words()){
-            youtubeIndex = s.indexOf("youtube.com");
+            s_low = s.toLowerCase();
+            youtubeIndex = s_low.indexOf("youtube.com");
             if(youtubeIndex!=-1)
                 result = findYoutube(s);
                 System.out.println(result);
